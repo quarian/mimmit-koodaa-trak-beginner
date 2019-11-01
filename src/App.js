@@ -6,12 +6,14 @@ function App() {
   return (
     <div className="App">
       <nav>
-        <Link to="/">Home</Link>
+        {pages.map(page => (
+          <Link to={page.path}>{page.title}</Link>
+        ))}
       </nav>
       <Router>
-        <Home path="/" />
-        <Stack path="stack" />
-        <Sorting path="sorting" />
+        {pages.map(page => (
+          <page.component path={page.path} />
+        ))}
       </Router>
     </div>
   );
@@ -22,5 +24,11 @@ const Home = () => <div>HOME</div>;
 const Stack = () => <div>STACKS</div>;
 
 const Sorting = () => <div>SORTING</div>;
+
+const pages = [
+  { component: Home, title: "Home", path: "/" },
+  { component: Stack, title: "Stack", path: "/stack" },
+  { component: Sorting, title: "Sorting", path: "/sorting" }
+];
 
 export default App;
