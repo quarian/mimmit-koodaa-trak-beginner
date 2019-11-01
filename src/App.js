@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Router, Link } from "@reach/router";
+import { StackPage } from "./Stack/Stack";
 
 function App() {
   return (
@@ -21,13 +22,11 @@ function App() {
 
 const Home = () => <div>HOME</div>;
 
-const Stack = () => <div>STACKS</div>;
-
 const Sorting = () => <div>SORTING</div>;
 
 const pages = [
   { component: Home, title: "Home", path: "/" },
-  { component: Stack, title: "Stack", path: "/stack" },
+  { component: StackPage, title: "Stack", path: "/stack" },
   { component: Sorting, title: "Sorting", path: "/sorting" }
 ];
 
