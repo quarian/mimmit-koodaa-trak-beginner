@@ -26,6 +26,12 @@ class Stack {
     this.stack.push(element);
   }
   pop() {
-    this.stack.pop();
+    return this.stack.pop();
+  }
+  peek() {
+    return this.stack[this.stack.length - 1];
+  }
+  getStack() {
+    return this.stack;
   }
 }
