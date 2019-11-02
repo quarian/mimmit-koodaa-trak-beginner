@@ -8,6 +8,10 @@ export const SortingPage = () => {
         sortFunction={naiveSort}
         title="Naive sorting algotithm"
       />
+      <SortingAlgorithmExample
+        sortFunction={quickSort}
+        title="Quicksort algotithm"
+      />
     </div>
   );
 };
@@ -91,13 +95,14 @@ const generateRandomArray = (length, minValue, maxValue) => {
   return array;
 };
 
+const swap = (array, i, j) => {
+  let temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+};
+
 const naiveSort = array => {
   const newArray = cloneArray(array);
-  const swap = (array, i, j) => {
-    let temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  };
   for (let i = 0; i < newArray.length; i++) {
     for (let j = 0; j < newArray.length; j++) {
       if (j > 0 && newArray[j] < newArray[j - 1]) {
@@ -106,5 +111,30 @@ const naiveSort = array => {
     }
   }
   console.log(newArray);
+  return newArray;
+};
+
+const quickSort = array => {
+  const newArray = cloneArray(array);
+  const partition = (array, low, high) => {
+    let pivot = array[high];
+    let i = low;
+    for (let j = low; j <= high; j++) {
+      if (array[j] < pivot) {
+        swap(array, i, j);
+        i = i + 1;
+      }
+    }
+    swap(array, i, high);
+    return i;
+  };
+  const sort = (subArray, low, high) => {
+    if (low < high) {
+      const p = partition(subArray, low, high);
+      sort(subArray, low, p - 1);
+      sort(subArray, p + 1, high);
+    }
+  };
+  sort(newArray, 0, newArray.length - 1);
   return newArray;
 };
