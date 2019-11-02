@@ -12,6 +12,10 @@ export const SortingPage = () => {
         sortFunction={quickSort}
         title="Quicksort algotithm"
       />
+      <SortingAlgorithmExample
+        sortFunction={insertionSort}
+        title="Insertion sort algotithm"
+      />
     </div>
   );
 };
@@ -111,6 +115,20 @@ const naiveSort = array => {
     }
   }
   console.log(newArray);
+  return newArray;
+};
+
+const insertionSort = array => {
+  const newArray = cloneArray(array);
+  let i = 1;
+  while (i < newArray.length) {
+    let j = i;
+    while (j > 0 && newArray[j - 1] > newArray[j]) {
+      swap(newArray, j, j - 1);
+      j = j - 1;
+    }
+    i = i + 1;
+  }
   return newArray;
 };
 
