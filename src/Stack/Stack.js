@@ -3,13 +3,16 @@ import { testStack } from "./StackTests";
 import { logTestResults } from "../TestFrameWork/testFunctions";
 
 export const StackPage = () => {
-  const [testResults, setTestResuls] = useState([]);
+  const [testResults, setTestResults] = useState([]);
   return (
     <div>
       <div>Text here about implementing the stack</div>
-      <div>Here a playground to play around with the stack</div>
       <div>
-        <button onClick={() => setTestResuls(testStack(Stack))}>
+        <div>Here a playground to play around with the stack</div>
+        <StackVisualisation />
+      </div>
+      <div>
+        <button onClick={() => setTestResults(testStack(Stack))}>
           Run tests on your stack
         </button>
         {testResults.length > 0 && logTestResults(testResults)}
@@ -18,9 +21,47 @@ export const StackPage = () => {
   );
 };
 
+const StackVisualisation = () => {
+  const [stack, updateStack] = useState(new Stack());
+  return (
+    <div>
+      <button
+        onClick={() => {
+          const newStack = new Stack(stack);
+          newStack.push(Math.floor(Math.random() * 11));
+          updateStack(newStack);
+        }}
+      >
+        Push random number into the stack!
+      </button>
+      <button
+        onClick={() => {
+          const newStack = new Stack(stack);
+          newStack.pop();
+          updateStack(newStack);
+        }}
+      >
+        Pop the stack
+      </button>
+      <div>
+        <div>Your stack looks like this:</div>
+        <div>
+          {stack
+            .getStack()
+            .slice()
+            .reverse()
+            .map((item, index) => (
+              <div key={index}>{item}</div>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
 class Stack {
-  constructor() {
-    this.stack = [];
+  constructor(stack) {
+    this.stack = stack ? stack.getStack() : [];
   }
   push(element) {
     this.stack.push(element);
