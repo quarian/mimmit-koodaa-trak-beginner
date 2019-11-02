@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Router, Link } from "@reach/router";
 import { StackPage } from "./Stack/Stack";
+import { SortingPage } from "./Sorting/Sorting";
 
 function App() {
   return (
@@ -22,12 +23,10 @@ function App() {
 
 const Home = () => <div>HOME</div>;
 
-const Sorting = () => <div>SORTING</div>;
-
 const pages = [
   { component: Home, title: "Home", path: "/" },
   { component: StackPage, title: "Stack", path: "/stack" },
-  { component: Sorting, title: "Sorting", path: "/sorting" }
+  { component: SortingPage, title: "Sorting", path: "/sorting" }
 ];
 
 export default App;
