@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { generateRandomArray } from "./sortingUtils";
-import { testSortingFunction } from "./sortingTests";
+import { testSortingFunction, testSortingPerformance } from "./sortingTests";
 import { TestVisualisation } from "../TestFrameWork/TestVisualisation";
 import { naiveSort, insertionSort, quickSort } from "./sortFunctions";
 
@@ -32,6 +32,9 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
     generateRandomArray(10, 0, 10)
   );
   const [testResult, setTestResult] = useState(undefined);
+  const [performanceTestResult, setPerfomanceTestResult] = useState(
+    "No performance test run yet"
+  );
   const setValue = (event, setFunction) => {
     const value = parseInt(event.target.value, 10);
     setFunction(value);
@@ -100,6 +103,17 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
         <div>
           {testResult ? TestVisualisation([testResult]) : "No result yet"}
         </div>
+      </div>
+      <div>
+        <div>{`Run a performance test on your ${title} algorithm`}</div>
+        <button
+          onClick={() =>
+            setPerfomanceTestResult(testSortingPerformance(sortFunction, title))
+          }
+        >
+          Test!
+        </button>
+        <div>{performanceTestResult}</div>
       </div>
     </div>
   );
