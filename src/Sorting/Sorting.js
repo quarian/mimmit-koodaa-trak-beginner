@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { generateRandomArray, swap, cloneArray } from "./SortingUtils";
+import { testSortingFunction } from "./SortingTests";
+import { logTestResults } from "../TestFrameWork/testFunctions";
 
 export const SortingPage = () => {
   return (
@@ -27,6 +30,7 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
   const [sortedArray, setSortedArray] = useState(
     generateRandomArray(10, 0, 10)
   );
+  const [testResult, setTestResult] = useState([]);
   const setValue = (event, setFunction) => {
     const value = parseInt(event.target.value, 10);
     setFunction(value);
@@ -83,26 +87,19 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
       <button onClick={() => setSortedArray(sortFunction(sortedArray))}>
         Sort your array with {title}
       </button>
+      <div>
+        <button
+          onClick={() =>
+            setTestResult(testSortingFunction(sortFunction, title))
+          }
+        >
+          Run tests on {title}
+        </button>
+        <div>Test results:</div>
+        <div>{logTestResults([testResult])}</div>
+      </div>
     </div>
   );
-};
-
-const cloneArray = array => {
-  return array.slice(0);
-};
-
-const generateRandomArray = (length, minValue, maxValue) => {
-  let array = new Array(length);
-  for (let i = 0; i < length; i++) {
-    array[i] = Math.floor(Math.random() * (maxValue - minValue) + minValue);
-  }
-  return array;
-};
-
-const swap = (array, i, j) => {
-  let temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
 };
 
 const naiveSort = array => {
