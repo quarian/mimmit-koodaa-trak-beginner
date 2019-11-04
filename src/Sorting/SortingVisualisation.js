@@ -4,13 +4,19 @@ import { testSortingFunction, testSortingPerformance } from "./sortingTests";
 import { TestVisualisation } from "../TestFrameWork/TestVisualisation";
 import { naiveSort, insertionSort, quickSort } from "./sortFunctions";
 
+import "./SortingVisualisation.css";
+
 export const SortingPage = () => {
   return (
     <div>
-      <div>Text here about implementing different sorting algorithms</div>
+      <h1>Sorting is a common problem faced in all kinds of applications</h1>
+      <h2>
+        Here are 3 sorting methods to implement. Pay attention to the different
+        performance of the implemented algorithms
+      </h2>
       <SortingAlgorithmExample
         sortFunction={naiveSort}
-        title="Naive sorting algotithm"
+        title="Bubble sort algotithm"
       />
       <SortingAlgorithmExample
         sortFunction={quickSort}
@@ -40,8 +46,8 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
     setFunction(value);
   };
   return (
-    <div>
-      <div>Explore {title} </div>
+    <div className="SortingExample">
+      <h2>Explore {title} </h2>
       <div>
         <label htmlFor="minValue">
           Set the minimum value in the sortable array
@@ -105,7 +111,7 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
         </div>
       </div>
       <div>
-        <div>{`Run a performance test on your ${title} algorithm`}</div>
+        <h3>{`Run a performance test on your ${title} algorithm`}</h3>
         <button
           onClick={() =>
             setPerfomanceTestResult(testSortingPerformance(sortFunction, title))
