@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import { Router, Link } from "@reach/router";
 import { StackPage } from "./Stack/StackVisualisation";
-import { SortingPage } from "./Sorting/Sorting";
+import { SortingPage } from "./Sorting/SortingVisualisation";
 
 function App() {
   return (
