@@ -27,7 +27,7 @@ export const testSorting = (sortedCandidate, testName) => {
   };
 };
 
-export const logTestResults = testResults => {
+export const TestVisualization = testResults => {
   return (
     <div>
       {testResults.map((result, index) => (

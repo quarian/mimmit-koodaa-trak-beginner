@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { generateRandomArray, swap, cloneArray } from "./SortingUtils";
 import { testSortingFunction } from "./SortingTests";
-import { logTestResults } from "../TestFrameWork/testFunctions";
+import { TestVisualization } from "../TestFrameWork/testFunctions";
 
 export const SortingPage = () => {
   return (
@@ -96,7 +96,9 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
           Run tests on {title}
         </button>
         <div>Test results:</div>
-        <div>{testResult ? logTestResults([testResult]) : "No result yet"}</div>
+        <div>
+          {testResult ? TestVisualization([testResult]) : "No result yet"}
+        </div>
       </div>
     </div>
   );

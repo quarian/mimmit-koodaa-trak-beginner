@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { testStack, parenthesisTestFunction } from "./StackTests";
-import { logTestResults } from "../TestFrameWork/testFunctions";
+import { TestVisualization } from "../TestFrameWork/testFunctions";
 
 export const StackPage = () => {
   const [testResults, setTestResults] = useState([]);
@@ -15,7 +15,7 @@ export const StackPage = () => {
         <button onClick={() => setTestResults(testStack(Stack))}>
           Run tests on your stack
         </button>
-        {testResults.length > 0 && logTestResults(testResults)}
+        {testResults.length > 0 && TestVisualization(testResults)}
       </div>
       <ParenthesisTester />
     </div>
@@ -91,7 +91,7 @@ const ParenthesisTester = () => {
       >
         Run automated test on your balacne algorithm
       </button>
-      {testResults.length > 0 && logTestResults(testResults)}
+      {testResults.length > 0 && TestVisualization(testResults)}
     </div>
   );
 };
