@@ -15,4 +15,6 @@ nav a:visited {
   font-size: 1.5rem;
   margin: 0 1rem;
   color: #008f11;
+  text-decoration: none;
+  padding: 0.5rem;
 }

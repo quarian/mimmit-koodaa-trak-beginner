@@ -10,7 +10,17 @@ function App() {
     <div className="App">
       <nav>
         {pages.map(page => (
-          <Link key={page.title} to={page.path}>
+          <Link
+            key={page.title}
+            to={page.path}
+            getProps={({ isCurrent }) => {
+              return {
+                style: {
+                  border: isCurrent ? "1px solid #008f11" : "none"
+                }
+              };
+            }}
+          >
             {page.title}
           </Link>
         ))}
