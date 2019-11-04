@@ -5,7 +5,7 @@ export const findLongestSequence = arrayLike => {
   let previousElement = "";
   for (let i = 0; i < arrayLike.length; i++) {
     currentElement = arrayLike[i];
-    if ((previousElement = "" || currentElement === previousElement)) {
+    if (previousElement === "" || currentElement === previousElement) {
       currentSequence += 1;
     } else if (currentElement !== previousElement) {
       if (currentSequence > longetsSequence) {
@@ -15,5 +15,5 @@ export const findLongestSequence = arrayLike => {
     }
     previousElement = currentElement;
   }
-  return longetsSequence;
+  return longetsSequence > currentSequence ? longetsSequence : currentSequence;
 };

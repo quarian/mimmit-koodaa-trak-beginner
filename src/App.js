@@ -3,6 +3,7 @@ import "./App.css";
 import { Router, Link } from "@reach/router";
 import { StackPage } from "./Stack/StackVisualisation";
 import { SortingPage } from "./Sorting/SortingVisualisation";
+import { MiscAlgorithmsPage } from "./Misc/MiscAlgorithmVisualisations";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ const Home = () => <div>HOME</div>;
 const pages = [
   { component: Home, title: "Home", path: "/" },
   { component: StackPage, title: "Stack", path: "/stack" },
-  { component: SortingPage, title: "Sorting", path: "/sorting" }
+  { component: SortingPage, title: "Sorting", path: "/sorting" },
+  { component: MiscAlgorithmsPage, title: "Misc algorithms", path: "/misc" }
 ];
 
 export default App;
