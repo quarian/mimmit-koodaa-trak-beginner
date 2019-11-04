@@ -51,17 +51,17 @@ const StackVisualisation = () => {
       >
         Pop the stack
       </button>
+      <h4>Your stack looks like this:</h4>
       <div className="Stack">
-        <div>Your stack looks like this:</div>
         <div>
           {stack
             .getStack()
             .slice()
             .reverse()
             .map((item, index) => (
-              <div key={index} className="StackItem">
+              <p key={index} className="StackItem">
                 {item}
-              </div>
+              </p>
             ))}
         </div>
       </div>

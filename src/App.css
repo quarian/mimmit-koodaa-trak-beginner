@@ -30,3 +30,9 @@ button:hover {
   cursor: pointer;
   box-shadow: 10px 5px 5px #008f11;
 }
+
+input {
+  background-color: black;
+  border: 1px solid #00ff41;
+  color: #00ff41;
+}

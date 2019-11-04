@@ -2,6 +2,11 @@
   margin: 2rem 0;
 }
 
+.StackContainer h4 {
+  margin: 0;
+  padding: 0;
+}
+
 .StackVisualisation {
   display: flex;
   flex-direction: row;
@@ -12,6 +17,7 @@
   flex-direction: row;
   justify-content: space-around;
   flex-grow: 1;
+  margin: 0 !important;
 }
 
 .StackItem {
