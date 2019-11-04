@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { Router, Link } from "@reach/router";
-import { StackPage } from "./Stack/Stack";
+import { StackPage } from "./Stack/StackVisualisation";
 import { SortingPage } from "./Sorting/Sorting";
 
 function App() {
