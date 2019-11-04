@@ -1,4 +1,3 @@
-import React from "react";
 import { isEqual } from "lodash";
 
 export const testEquality = (result, expected, testName) => {
@@ -25,18 +24,4 @@ export const testSorting = (sortedCandidate, testName) => {
     match: isSorted,
     errorMessage: `Array not sorted, first failing index: ${failIndex}, failed on array: ${sortedCandidate}`
   };
-};
-
-export const TestVisualization = testResults => {
-  return (
-    <div>
-      {testResults.map((result, index) => (
-        <div key={index}>
-          {result.match
-            ? `Passed ${result.testName}`
-            : `Failed ${result.testName}: ${result.errorMessage}`}
-        </div>
-      ))}
-    </div>
-  );
 };
