@@ -18,3 +18,15 @@ nav a:visited {
   text-decoration: none;
   padding: 0.5rem;
 }
+
+button {
+  height: 2rem;
+  background-color: black;
+  color: #00ff41;
+  border: 1px solid #00ff41;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 10px 5px 5px #008f11;
+}

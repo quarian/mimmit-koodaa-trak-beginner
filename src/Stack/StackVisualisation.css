@@ -1,0 +1,23 @@
+.StackContainer div {
+  margin: 2rem 0;
+}
+
+.StackVisualisation {
+  display: flex;
+  flex-direction: row;
+}
+
+.Stack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.StackItem {
+  padding: 0.3rem;
+  font-weight: bold;
+  font-size: large;
+  border: 1px solid #00ff41;
+  margin: 0.2rem 0;
+}

@@ -3,15 +3,17 @@ import { testStack, parenthesisTestFunction } from "./stackTests";
 import { TestVisualisation } from "../TestFrameWork/TestVisualisation";
 import { Stack, checkParenthesisBalance } from "./stack";
 
+import "./StackVisualisation.css";
+
 export const StackPage = () => {
   const [testResults, setTestResults] = useState([]);
   return (
-    <div>
-      <div>Text here about implementing the stack</div>
-      <div>
-        <div>Here a playground to play around with the stack</div>
-        <StackVisualisation />
-      </div>
+    <div className="StackContainer">
+      <h1>Stacks are a classic data structure</h1>
+      <h2>
+        They date way back to the beginning of computer science, and are still
+        useful nowadays
+      </h2>
       <div>
         <button onClick={() => setTestResults(testStack(Stack))}>
           Run tests on your stack
@@ -19,6 +21,10 @@ export const StackPage = () => {
         {testResults.length > 0 && TestVisualisation(testResults)}
       </div>
       <ParenthesisTester />
+      <div>
+        <h3>Here a playground to play around with the stack</h3>
+        <StackVisualisation />
+      </div>
     </div>
   );
 };
@@ -26,7 +32,7 @@ export const StackPage = () => {
 const StackVisualisation = () => {
   const [stack, updateStack] = useState(new Stack());
   return (
-    <div>
+    <div className="StackVisualisation">
       <button
         onClick={() => {
           const newStack = new Stack(stack);
@@ -45,7 +51,7 @@ const StackVisualisation = () => {
       >
         Pop the stack
       </button>
-      <div>
+      <div className="Stack">
         <div>Your stack looks like this:</div>
         <div>
           {stack
@@ -53,7 +59,9 @@ const StackVisualisation = () => {
             .slice()
             .reverse()
             .map((item, index) => (
-              <div key={index}>{item}</div>
+              <div key={index} className="StackItem">
+                {item}
+              </div>
             ))}
         </div>
       </div>
