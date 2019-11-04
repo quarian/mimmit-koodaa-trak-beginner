@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { findLongestSequence } from "./miscAlgorithms";
 import { testLongestSequenceAlgorithm } from "./miscAlgorithmTests";
 
+import "./MiscAlgorithmVisualisations.css";
+
 export const MiscAlgorithmsPage = () => {
   return (
-    <div>
-      <div>
+    <div className="MiscAlgorithmsContainer">
+      <h1>
         Here are some miscellaneous algorithms for you to play with. Have fun!
-      </div>
+      </h1>
       <LongestSequence />
     </div>
   );
@@ -18,8 +20,8 @@ const LongestSequence = () => {
   const [testSequenceResult, setTestSequenceResult] = useState(0);
   const [testResults, setTestresults] = useState(["Tests not run yet"]);
   return (
-    <div>
-      <div>Find the longest sequence of integers from an array.</div>
+    <div className="MiscAlgorithm">
+      <h2>Find the longest sequence of integers from an array.</h2>
 
       <label htmlFor="testSequence">Set test sequnce for manual testing</label>
       <input
@@ -33,7 +35,7 @@ const LongestSequence = () => {
       >
         Test your algorithm
       </button>
-      <div>{`Your algorithm found a sequence of length ${testSequenceResult}`}</div>
+      <h3>{`Your algorithm found a sequence of length ${testSequenceResult}`}</h3>
       <button
         onClick={() =>
           setTestresults(testLongestSequenceAlgorithm(findLongestSequence))
@@ -43,7 +45,7 @@ const LongestSequence = () => {
       </button>
       <div>
         {testResults.map(result => (
-          <div>{result}</div>
+          <h4>{result}</h4>
         ))}
       </div>
     </div>
