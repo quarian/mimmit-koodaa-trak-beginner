@@ -9,12 +9,14 @@ function App() {
     <div className="App">
       <nav>
         {pages.map(page => (
-          <Link to={page.path}>{page.title}</Link>
+          <Link key={page.title} to={page.path}>
+            {page.title}
+          </Link>
         ))}
       </nav>
       <Router>
         {pages.map(page => (
-          <page.component path={page.path} />
+          <page.component key={page.title} path={page.path} />
         ))}
       </Router>
     </div>

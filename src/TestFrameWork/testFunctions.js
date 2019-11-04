@@ -30,8 +30,8 @@ export const testSorting = (sortedCandidate, testName) => {
 export const logTestResults = testResults => {
   return (
     <div>
-      {testResults.map(result => (
-        <div>
+      {testResults.map((result, index) => (
+        <div key={index}>
           {result.match
             ? `Passed ${result.testName}`
             : `Failed ${result.testName}: ${result.errorMessage}`}

@@ -30,7 +30,7 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
   const [sortedArray, setSortedArray] = useState(
     generateRandomArray(10, 0, 10)
   );
-  const [testResult, setTestResult] = useState([]);
+  const [testResult, setTestResult] = useState(undefined);
   const setValue = (event, setFunction) => {
     const value = parseInt(event.target.value, 10);
     setFunction(value);
@@ -79,8 +79,8 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
       <div>
         <div>Currently, your array looks like this:</div>
         <div>
-          {sortedArray.map(item => (
-            <span> {item} </span>
+          {sortedArray.map((item, index) => (
+            <span key={index}> {item} </span>
           ))}
         </div>
       </div>
@@ -96,7 +96,7 @@ const SortingAlgorithmExample = ({ sortFunction, title }) => {
           Run tests on {title}
         </button>
         <div>Test results:</div>
-        <div>{logTestResults([testResult])}</div>
+        <div>{testResult ? logTestResults([testResult]) : "No result yet"}</div>
       </div>
     </div>
   );
