@@ -74,8 +74,8 @@ const ParenthesisTester = () => {
   const [singleTestResult, setSingleTestResult] = useState(false);
   const [testResults, setTestResults] = useState([]);
   return (
-    <div>
-      <div>Test your stack with parenthesis balance algorithm</div>
+    <div className="ParenthesisTester">
+      <h3>Test your stack with parenthesis balance algorithm</h3>
       <label htmlFor="parenthesis-input">Set your test string</label>
       <input
         id="parenthesis-input"
@@ -83,11 +83,15 @@ const ParenthesisTester = () => {
         value={testString}
         onChange={e => setTestSring(e.target.value)}
       />
-      <button
-        onClick={() => setSingleTestResult(checkParenthesisBalance(testString))}
-      >
-        Test your parenthesis balance function on the input above
-      </button>
+      <div>
+        <button
+          onClick={() =>
+            setSingleTestResult(checkParenthesisBalance(testString))
+          }
+        >
+          Test your parenthesis balance function on the input above
+        </button>
+      </div>
       <div>
         {singleTestResult
           ? `The parenthesis are balanced!`

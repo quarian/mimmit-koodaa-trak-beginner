@@ -12,6 +12,10 @@
   flex-direction: row;
 }
 
+.StackVisualisation button {
+  margin-right: 1rem;
+}
+
 .Stack {
   display: flex;
   flex-direction: row;

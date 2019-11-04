@@ -26,6 +26,14 @@ button {
   border: 1px solid #00ff41;
 }
 
+label {
+  margin-right: 1rem;
+}
+
+input {
+  font-size: large;
+}
+
 button:hover {
   cursor: pointer;
   box-shadow: 10px 5px 5px #008f11;
