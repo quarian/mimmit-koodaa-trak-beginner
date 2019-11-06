@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { generateRandomArray } from "./sortingUtils";
-import { testSortingFunction, testSortingPerformance } from "./sortingTests";
+import { generateRandomArray } from "./SortingUtils";
+import { testSortingFunction, testSortingPerformance } from "./SortingTests";
 import { TestVisualisation } from "../TestFrameWork/TestVisualisation";
 import { naiveSort, insertionSort, quickSort } from "./sortFunctions";
 

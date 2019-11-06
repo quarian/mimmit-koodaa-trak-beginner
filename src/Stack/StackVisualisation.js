@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { testStack, parenthesisTestFunction } from "./stackTests";
+import { testStack, parenthesisTestFunction } from "./StackTests";
 import { TestVisualisation } from "../TestFrameWork/TestVisualisation";
-import { Stack, checkParenthesisBalance } from "./stack";
+import { Stack, checkParenthesisBalance } from "./Stack";
 
 import "./StackVisualisation.css";
 
