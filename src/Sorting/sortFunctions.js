@@ -1,4 +1,4 @@
-import { swap, cloneArray } from "./sortingUtils";
+import { swap, cloneArray } from "./SortingUtils";
 
 export const naiveSort = array => {
   const newArray = cloneArray(array);

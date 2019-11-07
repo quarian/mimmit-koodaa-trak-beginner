@@ -1,4 +1,4 @@
-import { generateRandomArray } from "./sortingUtils";
+import { generateRandomArray } from "./SortingUtils";
 import { testSorting } from "../TestFrameWork/testFunctions";
 
 export const testSortingFunction = (sortingFunction, functionName) => {
