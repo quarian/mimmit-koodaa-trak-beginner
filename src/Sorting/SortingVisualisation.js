@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import { generateRandomArray } from "./SortingUtils";
 import { testSortingFunction, testSortingPerformance } from "./SortingTests";
 import { TestVisualisation } from "../TestFrameWork/TestVisualisation";
-import { naiveSort, insertionSort, quickSort } from "./sortFunctions";
+import {
+  naiveSort,
+  insertionSort,
+  quickSort,
+  selectionSort
+} from "./sortFunctions";
 
 import "./SortingVisualisation.css";
 
@@ -42,6 +47,12 @@ export const SortingPage = () => {
         description="Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order."
         readMore="https://www.geeksforgeeks.org/bubble-sort/"
         /* https://medium.com/@viktor.stojanov90/naive-sort-algorithms-in-javascript-bubble-sort-6a44dd78042 */
+      />
+      <SortingAlgorithmExample
+        sortFunction={selectionSort}
+        title="Selection sort algorithm"
+        description="Selection sort repeatedly selects the minimum value of the array to sort the arrya as a whole."
+        readMore="https://www.geeksforgeeks.org/selection-sort/"
       />
       <SortingAlgorithmExample
         sortFunction={insertionSort}

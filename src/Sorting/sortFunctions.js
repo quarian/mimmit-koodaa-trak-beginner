@@ -1,4 +1,4 @@
-import { swap, cloneArray } from "./SortingUtils";
+import { swap, cloneArray, findMinIndex } from "./SortingUtils";
 
 export const naiveSort = array => {
   // bubble sort
@@ -11,6 +11,15 @@ export const naiveSort = array => {
     }
   }
   console.log(newArray);
+  return newArray;
+};
+
+export const selectionSort = array => {
+  const newArray = cloneArray(array);
+  for (let i = 0; i < newArray.length; i++) {
+    const minIndex = findMinIndex(newArray, i);
+    swap(newArray, i, minIndex);
+  }
   return newArray;
 };
 

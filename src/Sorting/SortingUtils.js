@@ -15,3 +15,15 @@ export const swap = (array, i, j) => {
 export const cloneArray = array => {
   return array.slice(0);
 };
+
+export const findMinIndex = (array, startingMinIndex) => {
+  let min = array[startingMinIndex];
+  let minIndex = startingMinIndex;
+  for (let i = startingMinIndex; i < array.length; i++) {
+    if (array[i] < min) {
+      minIndex = i;
+      min = array[i];
+    }
+  }
+  return minIndex;
+};
