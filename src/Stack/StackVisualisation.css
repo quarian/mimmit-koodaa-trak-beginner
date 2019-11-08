@@ -7,9 +7,9 @@
   padding: 0;
 }
 
-.StackVisualisation {
-  display: flex;
-  flex-direction: row;
+.StackVisualisationContainer {
+  padding: 1rem;
+  border: 1px solid #00ff41;
 }
 
 .StackVisualisation button {

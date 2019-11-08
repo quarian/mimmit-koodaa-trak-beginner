@@ -1,6 +1,7 @@
 import { swap, cloneArray } from "./SortingUtils";
 
 export const naiveSort = array => {
+  // bubble sort
   const newArray = cloneArray(array);
   for (let i = 0; i < newArray.length; i++) {
     for (let j = 0; j < newArray.length; j++) {

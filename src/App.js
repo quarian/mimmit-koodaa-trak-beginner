@@ -47,6 +47,27 @@ const Home = () => (
       The source code is annotated with links and hints to sources on the web -
       and remember to ask any and all questions from the instructors!
     </p>
+    <hr></hr>
+    <h2>What is a Data Structure?</h2>
+    <p>
+      A data structure is a particular way of organizing data in a computer so
+      that it can be used effectively.<br></br>(from:&nbsp;
+      <a href="https://www.geeksforgeeks.org/data-structures/">GeeksForGeeks</a>
+      )
+    </p>
+    <h2>What about algorithms?</h2>
+    <p>
+      An algorithm is a step by step method of solving a problem.<br></br>It is
+      commonly used for data processing, calculation and other related computer
+      and mathematical operations.<br></br>An algorithm is also used to
+      manipulate data in various ways, such as inserting a new data item,
+      <br></br>
+      searching for a particular item or sorting an item.<br></br>(from:&nbsp;
+      <a href="https://www.techopedia.com/definition/3739/algorithm">
+        Techopedia
+      </a>
+      )
+    </p>
   </div>
 );
 

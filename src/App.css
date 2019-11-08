@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-size: 140%;
 }
 
 .App {
@@ -7,6 +8,11 @@ body {
   font-family: monospace;
   color: #00ff41;
   padding: 5%;
+}
+
+a,
+a:visited {
+  color: #00ffaa;
 }
 
 nav a,
@@ -20,7 +26,8 @@ nav a:visited {
 }
 
 button {
-  height: 2rem;
+  font-size: 1rem;
+  height: 3rem;
   background-color: black;
   color: #00ff41;
   border: 1px solid #00ff41;
@@ -40,7 +47,18 @@ button:hover {
 }
 
 input {
+  font-size: 1rem;
+  height: 3rem;
+  text-indent: 0.5rem;
   background-color: black;
   border: 1px solid #00ff41;
   color: #00ff41;
+}
+
+li {
+  list-style-type: none;
+}
+
+hr {
+  border: 1px solid #00ff41;
 }

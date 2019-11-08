@@ -23,7 +23,7 @@ const LongestSequence = () => {
     <div className="MiscAlgorithm">
       <h2>Find the longest sequence of integers from an array.</h2>
 
-      <label htmlFor="testSequence">Set test sequnce for manual testing</label>
+      <label htmlFor="testSequence">Set test sequence for manual testing</label>
       <input
         type="text"
         id="testSequence"
