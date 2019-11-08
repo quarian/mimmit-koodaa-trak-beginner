@@ -8,12 +8,22 @@ export const TestVisualisation = testResults => {
         <div key={index}>
           {result.match ? (
             <span className="ResultRow">
-              <span>Passed &#9989;</span>
+              <span>
+                Passed{" "}
+                <span role="img" aria-hidden="true">
+                  &#9989;
+                </span>
+              </span>
               <span>{result.testName}</span>
             </span>
           ) : (
             <span className="ResultRow">
-              <span>Failed &#10060;</span>{" "}
+              <span>
+                Failed{" "}
+                <span role="img" aria-hidden="true">
+                  &#10060;
+                </span>
+              </span>
               <span>
                 ${result.testName}: ${result.errorMessage}`
               </span>
