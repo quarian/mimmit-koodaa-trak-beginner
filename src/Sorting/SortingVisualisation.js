@@ -35,20 +35,19 @@ export const SortingPage = () => {
         readMore="https://www.geeksforgeeks.org/bubble-sort/"
         /* https://medium.com/@viktor.stojanov90/naive-sort-algorithms-in-javascript-bubble-sort-6a44dd78042 */
       />
-
-      <SortingAlgorithmExample
-        sortFunction={quickSort}
-        title="Quicksort algorithm"
-        description="QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways."
-        readMore="https://www.geeksforgeeks.org/quick-sort/"
-        /* https://medium.com/basecs/pivoting-to-understand-quicksort-part-1-75178dfb9313 */
-      />
       <SortingAlgorithmExample
         sortFunction={insertionSort}
         title="Insertion sort algorithm"
         description="Insertion sort is a simple sorting algorithm that works the way we sort playing cards in our hands."
         readMore="https://www.geeksforgeeks.org/insertion-sort/"
         /* https://medium.com/basecs/inching-towards-insertion-sort-9799274430da */
+      />
+      <SortingAlgorithmExample
+        sortFunction={quickSort}
+        title="Quicksort algorithm"
+        description="QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot. There are many different versions of quickSort that pick pivot in different ways."
+        readMore="https://www.geeksforgeeks.org/quick-sort/"
+        /* https://medium.com/basecs/pivoting-to-understand-quicksort-part-1-75178dfb9313 */
       />
     </div>
   );
