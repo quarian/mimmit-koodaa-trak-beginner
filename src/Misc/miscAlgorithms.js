@@ -17,3 +17,15 @@ export const findLongestSequence = arrayLike => {
   }
   return longetsSequence > currentSequence ? longetsSequence : currentSequence;
 };
+
+export const detectPalindrome = palindromeCandidate => {
+  let i = 0;
+  let j = palindromeCandidate.length - 1;
+  for (i; i < palindromeCandidate.length / 2; i++) {
+    if (palindromeCandidate[i] !== palindromeCandidate[j]) {
+      return false;
+    }
+    j--;
+  }
+  return true;
+};
