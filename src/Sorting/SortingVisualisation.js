@@ -17,12 +17,20 @@ export const SortingPage = () => {
         More info about time complexity:
         <ul>
           <li>
-            <a href="https://yourbasic.org/algorithms/time-complexity-explained/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://yourbasic.org/algorithms/time-complexity-explained/"
+            >
               YourBasic
             </a>
           </li>
           <li>
-            <a href="https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/"
+            >
               HackerEarth
             </a>
           </li>
@@ -78,7 +86,11 @@ const SortingAlgorithmExample = ({
       <h2>Explore {title} </h2>
       <p>
         {description}
-        <br></br>(from:&nbsp;<a href={readMore}>GeeksForGeeks</a>)
+        <br></br>(from:&nbsp;
+        <a target="_blank" rel="noopener noreferrer" href={readMore}>
+          GeeksForGeeks
+        </a>
+        )
       </p>
       <div>
         <label htmlFor="minValue">

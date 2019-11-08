@@ -52,7 +52,13 @@ const Home = () => (
     <p>
       A data structure is a particular way of organizing data in a computer so
       that it can be used effectively.<br></br>(from:&nbsp;
-      <a href="https://www.geeksforgeeks.org/data-structures/">GeeksForGeeks</a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.geeksforgeeks.org/data-structures/"
+      >
+        GeeksForGeeks
+      </a>
       )
     </p>
     <h2>What about algorithms?</h2>
@@ -63,7 +69,11 @@ const Home = () => (
       manipulate data in various ways, such as inserting a new data item,
       <br></br>
       searching for a particular item or sorting an item.<br></br>(from:&nbsp;
-      <a href="https://www.techopedia.com/definition/3739/algorithm">
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://www.techopedia.com/definition/3739/algorithm"
+      >
         Techopedia
       </a>
       )

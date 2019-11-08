@@ -20,7 +20,11 @@ export const StackPage = () => {
         push, which adds an element to the collection,<br></br>and pop, which
         removes the most recently added element that was not yet removed.
         <br></br>(from:&nbsp;
-        <a href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://en.wikipedia.org/wiki/Stack_(abstract_data_type)"
+        >
           Wikipedia
         </a>
         )
@@ -98,7 +102,11 @@ const StackVisualisation = () => {
         <br></br>
         container and the size of the stack is decreased by 1.<br></br>
         <br></br>(from:{" "}
-        <a href="https://www.geeksforgeeks.org/stack-push-and-pop-in-c-stl/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.geeksforgeeks.org/stack-push-and-pop-in-c-stl/"
+        >
           GeeksForGeeks
         </a>
         )
@@ -116,7 +124,11 @@ const ParenthesisTester = () => {
       <h3>Test your stack with parenthesis balance algorithm</h3>
       <p>
         (check:{" "}
-        <a href="https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/"
+        >
           Parenthesis Balance on GeeksForGeeks
         </a>
         )
