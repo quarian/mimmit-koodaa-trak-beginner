@@ -24,9 +24,7 @@ export const TestVisualisation = testResults => {
                   &#10060;
                 </span>
               </span>
-              <span>
-                ${result.testName}: ${result.errorMessage}`
-              </span>
+              <span>{`${result.testName}: ${result.errorMessage}`}</span>
             </span>
           )}
         </div>

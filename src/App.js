@@ -4,6 +4,7 @@ import { Router, Link } from "@reach/router";
 import { StackPage } from "./Stack/StackVisualisation";
 import { SortingPage } from "./Sorting/SortingVisualisation";
 import { MiscAlgorithmsPage } from "./Misc/MiscAlgorithmVisualisations";
+import { SimpleAlgorithmsPage } from "./Simple/SimpleAlgorithmVisualisations";
 
 function App() {
   return (
@@ -83,6 +84,11 @@ const Home = () => (
 
 const pages = [
   { component: Home, title: "Home", path: "/" },
+  {
+    component: SimpleAlgorithmsPage,
+    title: "Simple algorithms",
+    path: "/simple"
+  },
   { component: StackPage, title: "Stack", path: "/stack" },
   { component: SortingPage, title: "Sorting", path: "/sorting" },
   { component: MiscAlgorithmsPage, title: "Misc algorithms", path: "/misc" }
